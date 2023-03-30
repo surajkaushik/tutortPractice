@@ -8,14 +8,16 @@ public class RightAngleTriangleWithNumbers {
 		System.out.println("Please enter a number: ");
 		Scanner sc = new Scanner(System.in);
 		int val= sc.nextInt();
-		
-		for(int i=1;i<=val;i++) {
+		RightAngleTriangleWithNumbers.PrintTriangle(val);
+	}
+	
+	static void PrintTriangle(int value) {
+		for(int i=1;i<=value;i++) {
 			for(int j=1;j<=i;j++) {
 				System.out.print(j+" ");
 			}
 			System.out.println();
 		}
-		
 	}
 
 }
