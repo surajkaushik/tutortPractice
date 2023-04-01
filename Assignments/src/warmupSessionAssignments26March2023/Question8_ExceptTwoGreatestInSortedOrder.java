@@ -2,11 +2,11 @@ package warmupSessionAssignments26March2023;
 
 import java.util.Arrays;
 
-public class ExceptTwoGreatestInSortedOrder_Question8 {
+public class Question8_ExceptTwoGreatestInSortedOrder {
 
 	public static void main(String[] args) {
 		int a[] = { 2, 8, 7, 1, 5,1,43,54,65 };
-		ExceptTwoGreatestInSortedOrder_Question8.exceptTwoGreatestInSortedOrder(a);
+		Question8_ExceptTwoGreatestInSortedOrder.exceptTwoGreatestInSortedOrder(a);
 	}
 
 	private static void exceptTwoGreatestInSortedOrder(int[] a) {

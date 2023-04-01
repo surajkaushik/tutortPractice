@@ -2,13 +2,13 @@ package warmupSessionAssignments26March2023;
 
 import java.util.Scanner;
 
-public class SumOfAll_Question1 {
+public class Question1_SumOfAll {
 	public static void main(String[] args) {
 		
 		System.out.println("Please enter a number: ");
 		Scanner sc = new Scanner(System.in);
 		int val = sc.nextInt();
-		SumOfAll_Question1.sumOfAll(val);
+		Question1_SumOfAll.sumOfAll(val);
 		
 	}
 	static void sumOfAll(int val) {

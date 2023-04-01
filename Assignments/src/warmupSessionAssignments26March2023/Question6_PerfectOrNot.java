@@ -1,10 +1,10 @@
 package warmupSessionAssignments26March2023;
 
-public class PerfectOrNot_Question6 {
+public class Question6_PerfectOrNot {
 
 	public static void main(String[] args) {
 		int Arr[] = { 1, 2, 3, 2, 1 };
-		PerfectOrNot_Question6.perfectOrNot(Arr);
+		Question6_PerfectOrNot.perfectOrNot(Arr);
 	}
 
 	static void perfectOrNot(int arr[]) {

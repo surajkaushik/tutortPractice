@@ -1,6 +1,6 @@
 package warmupSessionAssignments26March2023;
 
-public class SumOfNNumbers_Question9 {
+public class Question9_SumOfNNumbers {
 
 	public static void main(String[] args) {
 		int n=5,sum=0;

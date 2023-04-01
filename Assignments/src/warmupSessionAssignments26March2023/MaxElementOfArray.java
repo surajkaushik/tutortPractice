@@ -14,7 +14,7 @@ public class MaxElementOfArray {
 			else if(a.length==0) {System.out.println("Size 0");}
 			return;
 		}
-		
+		//MinMaxUsingSinglePass
 		int min=a[0],max=a[0];
 		for(int i=1;i<a.length;i++) {
 			if(a[i]>max) {max=a[i];}

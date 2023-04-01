@@ -1,9 +1,9 @@
 package warmupSessionAssignments26March2023;
 
-public class IndexValueCompare_Question5 {
+public class Question5_IndexValueCompare {
 	public static void main(String[] args) {
 		int arr[] = { 15, 2, 45, 12, 7 };
-		IndexValueCompare_Question5.compare(arr);
+		Question5_IndexValueCompare.compare(arr);
 	}
 
 	static void compare(int arr[]) {
