@@ -1,0 +1,219 @@
+
+--------------------------------------------------------------------------------------------------------------------
+Q1. Given an array of N integers. Your task is to print the sum of all of the integers.
+
+public class Question1_SumOfAll {
+	public static void main(String[] args) {
+		
+		System.out.println("Please enter a number: ");
+		Scanner sc = new Scanner(System.in);
+		int val = sc.nextInt();
+		Question1_SumOfAll.sumOfAll(val);
+		
+	}
+	static void sumOfAll(int val) {
+		Scanner sc1 = new Scanner(System.in);
+		int sum = 0;
+		int arr[] = new int[val];
+		for (int i = 0; i < val; i++) {
+			arr[i] = sc1.nextInt();
+		}
+		for (int i : arr) {
+			sum += i;
+		}
+		System.out.println("Total Sum is: " + sum);
+		
+	}
+}
+--------------------------------------------------------------------------------------------------------------------
+Q2. Given an array A[] of N integers and an index Key. Your task is to print the element present at index key in the array.
+
+public class Question2_PrintElementAtIndex {
+	public static void main(String[] args) {
+		System.out.println("Please the size of Array and Index no. :");
+		Scanner sc = new Scanner(System.in);
+		int size = sc.nextInt();
+		int index = sc.nextInt();
+		int arr[] = new int[size];
+		for (int i = 0; i < size; i++) {
+			arr[i] = sc.nextInt();
+		}
+		Question2_PrintElementAtIndex.element(arr, index);
+	}
+	static void element(int arr[],int index) {
+		System.out.println("Element at index is " + arr[index]);
+	}
+
+}
+
+--------------------------------------------------------------------------------------------------------------------
+Q3. Given an sorted array A of size N. Find number of elements which are less than or equal to given element X.
+public class Question3_ElementsLessOrEqualToX {
+	public static void main(String[] args) {
+		int n=6,x=9;
+		int a[]={1, 2, 4, 5, 8, 10};
+		Question3_ElementsLessOrEqualToX.elementsLessOrEqualToX(a, x);
+	}
+	static void elementsLessOrEqualToX(int a[],int x) {
+		int count=0;
+		for (int i : a) {
+			if(i<=x) {
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+}
+
+--------------------------------------------------------------------------------------------------------------------
+Q4. You are given an array A of size N. You need to print elements of A in alternate order (starting from index 0).
+public class Question4_AlternateIndex {
+	public static void main(String[] args) {
+	int n = 5;
+	int A[] = {1, 2, 3, 4,5};
+	Question4_AlternateIndex.alternateIndex(A);
+	}
+	static void alternateIndex(int a[]) {
+		for(int i=0;i<a.length;i++) {
+			System.out.println(a[i]);
+			i++;
+		}
+	}
+}
+
+--------------------------------------------------------------------------------------------------------------------
+Q5. Given an array Arr of N positive integers. Your task is to find the elements whose value is equal to that of its index value ( Consider 1-based indexing ).
+
+public class Question5_IndexValueCompare {
+	public static void main(String[] args) {
+		int arr[] = { 15, 2, 45, 12, 7 };
+		Question5_IndexValueCompare.compare(arr);
+	}
+
+	static void compare(int arr[]) {
+		for(int i=1;i<=arr.length;i++) {
+			if(i==arr[i-1])
+			    System.out.print(arr[i-1]+" ");
+		}
+	}
+}
+
+--------------------------------------------------------------------------------------------------------------------
+Q6. Given an array of size N and you have to tell whether the array is perfect or not. An array is said to be perfect if it's reverse array matches the original array. If the array is perfect then print "PERFECT" else print "NOT PERFECT".
+
+public class Question6_PerfectOrNot {
+
+	public static void main(String[] args) {
+		int Arr[] = { 1, 2, 3, 2, 1 };
+		Question6_PerfectOrNot.perfectOrNot(Arr);
+	}
+
+	static void perfectOrNot(int arr[]) {
+		int count = 0;
+		int revArr[] = new int[arr.length];
+		for (int i = arr.length - 1; i >= 0; i--) {
+			revArr[arr.length - 1 - i] = arr[i];
+		}
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == revArr[i]) {
+				count++;
+			} else {
+				System.out.println("Not PERFECT");
+				break;
+			}
+		}
+		if (count == arr.length) {
+			System.out.println("PERFECT");
+		}
+	}
+}
+
+
+--------------------------------------------------------------------------------------------------------------------
+Q7. Given an array of length N, at each step it is reduced by 1 element. In the first step the maximum element would be removed, while in the second step minimum element of the remaining array would be removed, in the third step again the maximum and so on. Continue this till the array contains only 1 element. And find the final element remaining in the array
+public class Question7_MaxMinAlternateReduce {
+	public static void main(String[] args) {
+		int A[] = {7, 8, 3, 4, 2, 9, 5};
+		//int A[] = {8, 1, 2, 9, 4, 3, 7, 5};
+		Question7_MaxMinAlternateReduce.maxMinAlternateReduce(A);
+	}
+
+	private static void maxMinAlternateReduce(int[] a) {
+		Arrays.sort(a);
+		int x= a.length%2==0?a[(a.length/2)-1]:a[a.length/2];
+		System.out.println(x);
+	}
+
+}
+ 
+
+--------------------------------------------------------------------------------------------------------------------
+Q8. Given an array of N distinct elements, the task is to find all elements in array except two greatest elements in sorted order
+
+public class Question8_ExceptTwoGreatestInSortedOrder {
+
+	public static void main(String[] args) {
+		int a[] = { 2, 8, 7, 1, 5,1,43,54,65 };
+		Question8_ExceptTwoGreatestInSortedOrder.exceptTwoGreatestInSortedOrder(a);
+	}
+
+	private static void exceptTwoGreatestInSortedOrder(int[] a) {
+
+		Arrays.sort(a);
+		for(int i=0;i<a.length-2;i++) {
+			System.out.println(a[i]);
+		}
+
+	}
+}
+
+
+--------------------------------------------------------------------------------------------------------------------
+Q9. Write a program to find the sum of the given series 1+2+3+ . . . . . .(N terms)
+
+public class Question9_SumOfNNumbers {
+
+	public static void main(String[] args) {
+		int n=5,sum=0;
+		for(int i=1;i<=n;i++) {
+			sum+=i;
+		}
+		System.out.println("sum is "+sum);
+	}
+
+}
+
+--------------------------------------------------------------------------------------------------------------------
+Q10. Given a number N. Your task is to check whether it is fascinating or not. Fascinating Number: When a number(should contain 3 digits or more) is multiplied by 2 and 3 ,and when both these products are concatenated with the original number, then it results in all digits from 1 to 9 present exactly once.
+
+public class Question10_FascinatingNumber {
+	public static void main(String[] args) {
+		int n = 192;
+		System.out.println(Question10_FascinatingNumber.checkFascinating(n));
+	}
+	  static String checkFascinating(int n){
+          int m2=n*2,m3=n*3;
+          String num =n+""+m2+m3;
+          boolean fascinating = true;  
+          for(char c='1';c<='9';c++){  
+              int count = 0;  
+              for(int i=0;i<num.length();i++){
+                  char ch = num.charAt(i);
+                  if(ch == c)  
+                      count++;  
+              }  
+              if(count > 1 || count == 0){
+                  fascinating = false;  
+                  break;  
+              }  
+          }  
+          if(fascinating)  
+              return num + " is a fascinating number.";  
+          else  
+              return num + " is not a fascinating number."; 
+  }
+	
+}
+
+---------------------------------------------------------------------------END-----------------------------------------------------------------
+
